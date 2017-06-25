@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "Shared/_Layout.cshtml";
+    var mark = ApplicationContext.Current.Services.MemberService.GetMembersByPropertyValue("subjectId", "Mark").FirstOrDefault();
+    var someMedia = new UmbracoHelper(Umbraco.UmbracoContext).TypedMedia(mark.GetValue("initialImage"));
+}
+
+<h1>Hello, world!</h1>
+
+@*<img src="@someMedia.Url" />*@
+
+<video id="video" width="400" height="400" preload autoplay loop muted></video>
+<canvas id="canvas" width="400" height="400"></canvas>
+<canvas id="capturedFaceCanvas" width="400" height="400"></canvas>
