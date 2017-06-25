@@ -294,3 +294,6 @@ codecoveragereport.xml
 
 #WE NEED THE LIBRARIES FOLDER!
 **/bower_components/**
+
+**/Umbraco/**
+**/Umbraco_Client/**
